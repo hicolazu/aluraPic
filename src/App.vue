@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
+    <img v-bind:src="foto.url" v-bind:alt="foto.titulo">
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -24,7 +24,11 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Alura Pic',
+      foto: {
+          url: '../foto.jpg',
+          titulo: 'cachorro'
+      }
     }
   }
 }
